@@ -12,18 +12,17 @@ const {__} = wp.i18n;
 const {registerBlockType} = wp.blocks;
 const {TextControl} = wp.components;
 registerBlockType('bonseo/block-bs-arrow-banner', {
-	title: __('Arrow Banner'),
+	title: __('Banner Arrow'),
 	icon: 'editor-quote',
 	category: 'bonseo-blocks',
 	keywords: [
-		__('bs-arrow-banner'),
+		__('bs-banner-arrow'),
 		__('BonSeo'),
 		__('BonSeo Block'),
 	],
 	edit: function ({posts, className, attributes, setAttributes}) {
 		return (
 			<div>
-				<h2> Opiniones de Clientes</h2>
 				<TextControl
 					className={`${className}__title`}
 					label={__('Título del banner')}
@@ -32,7 +31,7 @@ registerBlockType('bonseo/block-bs-arrow-banner', {
 				/>
 				<TextControl
 					className={`${className}__content`}
-					label={__('Fresa del banner')}
+					label={__('Frase del banner')}
 					value={attributes.content}
 					onChange={content => setAttributes({content})}
 				/>
@@ -43,10 +42,10 @@ registerBlockType('bonseo/block-bs-arrow-banner', {
 					onChange={cta => setAttributes({cta})}
 				/>
 				<TextControl
-					className={`${className}__mail`}
-					label={__('Email de contacto')}
-					value={attributes.mail}
-					onChange={mail => setAttributes({mail})}
+					className={`${className}__url`}
+					label={__('Url o Email(mailto:)')}
+					value={attributes.url}
+					onChange={url => setAttributes({url})}
 				/>
 			</div>
 		);

@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Banner Arrow [BonSeo Block]
- * Plugin URI: https://www.bonseo.es/wordpress-gutenberg-blocks/customer-opinions
+ * Plugin URI: https://www.bonseo.es/wordpress-gutenberg-blocks/arrow-banner
  * Description: Un banner simple en forma de flecha
  * Author: jjlmoya
  * Author URI: https://www.bonseo.es/

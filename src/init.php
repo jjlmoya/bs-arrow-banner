@@ -28,7 +28,7 @@ register_block_type('bonseo/' . $block,
 			'cta' => array(
 				'type' => 'string',
 			),
-			'mail' => array(
+			'url' => array(
 				'type' => 'string',
 			)
 
@@ -89,7 +89,7 @@ function render_bs_arrow_banner($attributes)
 	$title = $attributes['title'];
 	$content = $attributes['content'];
 	$cta = $attributes['cta'];
-	$mail = $attributes['mail'];
+	$url = $attributes['url'];
 
 	return '
 		<section class="og-banner-arrow">
@@ -102,7 +102,7 @@ function render_bs_arrow_banner($attributes)
 				</p>
 			</div>
 			<div class="og-banner-arrow__edge  l-flex l-flex--justify-center">
-				<a href="mailto:' . $mail . '" class="a-button a-button--rounded a-button--xs a-button--secondary">
+				<a href="' . $url . '" class="a-button a-button--rounded a-button--xs a-button--secondary">
 					' . $cta . '
 				</a>
 			</div>
