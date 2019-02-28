@@ -30,6 +30,9 @@ register_block_type('bonseo/' . $block,
 			),
 			'url' => array(
 				'type' => 'string',
+			),
+			'className' => array(
+				'type' => 'string',
 			)
 
 		),
@@ -86,13 +89,15 @@ function bs_arrow_banner_editor_assets()
 
 function render_bs_arrow_banner($attributes)
 {
-	$title = $attributes['title'];
-	$content = $attributes['content'];
-	$cta = $attributes['cta'];
-	$url = $attributes['url'];
+	$title = isset($attributes['title']) ? $attributes['title'] : '';
+	$content = isset($attributes['content']) ? $attributes['content'] : '';
+	$cta = isset($attributes['cta']) ? $attributes['cta'] : '';
+	$url = isset($attributes['url']) ? $attributes['url'] : '';
+	$class = isset($attributes['className']) ? ' ' . $attributes['className'] : '';
+
 
 	return '
-		<section class="og-banner-arrow">
+		<section class="og-banner-arrow' . $class . '">
 			<div class="og-banner-arrow__simple a-pad">
 				<h2 class="a-text a-text--xl a-text--secondary a-text--center">
 					' . $title . '
