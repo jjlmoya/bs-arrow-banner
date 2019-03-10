@@ -106,8 +106,8 @@ function render_bs_arrow_banner($attributes)
 					' . $content . '
 				</p>
 			</div>
-			<div class="og-banner-arrow__edge  l-flex l-flex--justify-center">
-				<a href="' . $url . '" class="a-button a-button--rounded a-button--xs a-button--secondary">
+			<div class="og-banner-arrow__edge  l-flex l-flex--justify-center a-pad">
+				<a href="' . $url . '" class="a-button a-button--rounded a-button a-button--s a-button--secondary a-mar--y--bottom-40">
 					' . $cta . '
 				</a>
 			</div>
