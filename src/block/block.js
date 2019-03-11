@@ -4,10 +4,6 @@
  * Registering a basic block with Gutenberg.
  * Simple block, renders and saves the same content without any interactivity.
  */
-
-import './style.scss';
-import './editor.scss';
-
 const {__} = wp.i18n;
 const {registerBlockType} = wp.blocks;
 const {TextControl} = wp.components;
@@ -23,6 +19,7 @@ registerBlockType('bonseo/block-bs-arrow-banner', {
 	edit: function ({posts, className, attributes, setAttributes}) {
 		return (
 			<div>
+				<h2> Arrow Banner </h2>
 				<TextControl
 					className={`${className}__title`}
 					label={__('Título del banner')}
